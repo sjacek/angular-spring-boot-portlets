@@ -7,12 +7,12 @@ A basic crud application where only authenticated users of portal can view the s
 
 This portlet leverages the power of angular custom elements and the powerful capabilities of Spring Boot with respect on liferay service builder as regards the persistence layer.
 
-<img src=screenshots/authorized.png />
+<img src=screenshots/authorized.png  alt="Liferay acreenshot with angular portlet"/>
 
 ## Download and install the Liferay Portal 7.2 server.
 After you have cloned the project, open a terminal to the angular-spring-boot-portlets folder and run
 
-<code>mvn bundle-support:init</code>
+<code>./mvnw bundle-support:init</code>
 
 The above command downloads the Liferay Portal specified in pom.xml version (7.2) from the specified repository
 
