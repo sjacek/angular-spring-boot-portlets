@@ -27,11 +27,25 @@ https://portal.liferay.dev/docs/7-0/reference/-/knowledge_base/r/bundle-support-
 https://portal.liferay.dev/docs/7-0/tutorials/-/knowledge_base/t/tooling
 
 ## How to build and deploy the modules
-1) Install the npm dependencies to angular app by running <br/>
+1) set JAVA_HOME environment variable to the JDK8 home folder
+
+2) Enable legacy OpenSSL provider.
+   https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
+
+    On Unix-like (Linux, macOS, Git bash, etc.):
+    <code>export NODE_OPTIONS=--openssl-legacy-provider</code>
+    
+    On Windows command prompt:
+    <code>set NODE_OPTIONS=--openssl-legacy-provider</code>
+
+    On PowerShell:
+    <code>$env:NODE_OPTIONS = "--openssl-legacy-provider"</code>
+
+3) Install the npm dependencies to angular app by running <br/>
 <code>npm install --prefix wars/books-catalog-portlet</code>
 
-2) Run <code>npm run build:portlet --prefix wars/books-catalog-portlet</code>
+4) Run <code>npm run build:portlet --prefix wars/books-catalog-portlet</code>
 
-3) Run <code>mvn install</code>
+5) Run <code>./mvnw install</code>
 
-4) Run <code>mvn verify</code>
+6) Run <code>./mvnw verify</code>
